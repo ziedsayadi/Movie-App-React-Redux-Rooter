@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
+.goldstar{
+  color: gold;
+  margin: 9px;
+  padding: 0;
+  cursor: pointer;
+
+}
+.greystar{
+  color: wheat; 
+  margin: 9px;
+  padding: 0;
+  cursor: pointer;
+
+}
+.Bigcontainer{
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
+   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Movi-img{
+height: 325px;
+width: 320px;
+display: flex;
+flex-wrap: wrap;
+padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p{
+  margin-top: 10px;
+  max-width: 250px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.712);
 }
+label{
+  max-width: 295px;
+  margin-left: 10px;
+  
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.discption{
+  font-weight: 300;
+  font-size: 14px;
+}
+.container{
+  border:  #596164;
+  margin: 15px;
+  padding: 0;
+  height: 600px;
+  max-width:325px;
+  background-color: #5b6467;
+  background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);  
+  margin-left: 4%;
+  -webkit-perspective: 1000;
+}
+.card{
+  background-color:#6c757d;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*.container:hover .flipper, .container.hover .flipper {
+  -webkit-transform: rotateY(180deg);
+}
+.container, .front, .back {
+	width: 320px;
+	height: 480px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* flip speed goes here 
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap 
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back 
+.front {
+  z-index: 2;
+}
+
+/* back, initially hidden pane 
+.back {
+-webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    -o-transform:rotateY(180deg);
+    transform:rotateY(180deg);}*/
+
+.container:hover{
+  cursor: pointer;
+  background-color: #28313B;
+  -webkit-box-shadow: 15px 10px 7px 1px rgba(0,0,0,0.54);
+-moz-box-shadow: 15px 10px 7px 1px rgba(0,0,0,0.54);
+box-shadow: 15px 10px 7px 1px rgba(0,0,0,0.54); 
+
+}
+.movi-cont{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.Bar{
+  width: 100%;
+  padding-left: 30px;
+  background-color: #2d3436;
+  background-image:linear-gradient(315deg, #dc3545 0%, #000000 74%)
+ 
+}
+.Searchmovie{
+  width: 60%;
+  margin-left: 10%;
+  height: 45px;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 8px;
+  margin-top: 15px;
+  color:grey;
+}
+.Button-search{
+  height: 42px;
+  border-radius: 5px;
+  width: 80px;
+
+}
+.SearchStars{
+  font-size: large;
+  margin-left: 15px;
+  color:white;
+  font-weight: 500;
+  font-family: cursive;
+}
+/*Modal*/
+.Modal-cont{
+  margin-top: 2%;
+  margin-left: 3.8% ;
+  height: 325px;
+  width: 250px;
+  margin-bottom: 2%;
+}
+.Modal-img{
+width:5vw ;
+}
+.Modal-cont .Modal-img:hover{
+  width: 5.5vw;
+}
+.MN{
+  margin-top: 5%;
+}
+.Modal-content{
+height: 40vw;
+}
+.Modal-input{
+  height: 20vw;
+  padding: 0;
+  
+  
+}
+label.fname{
+  font-family: sans-serif;
+  font-size: 16px;
+  margin-left: 18%;
+  width: 260px;
+  text-align: center ;
+  color: #2D3436  ;
+  
+}
+.input{
+  margin-left: 8%;
+  width: 25vw;
+  border-radius: 5px;
+  height: 40px;
+  background-color: #D8DEDE;
+  font-size: 15px;
+}
+.title-input{
+  padding-right: 15px;
 }
