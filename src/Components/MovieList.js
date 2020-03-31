@@ -29,13 +29,7 @@ import {Link} from "react-router-dom"
     search:word.target.value,
     
   })  }
-  //ajoutfilm
-
-  /*addmovie=(title,img,rating)=>{
-    this.setState({
-      movies:movies.concat({title,img, rating})
-    })
-  }*/
+  
 
   
  
@@ -71,9 +65,8 @@ import {Link} from "react-router-dom"
                 <img className="Movi-img" src={ele.img}/>
                 <p className="titles">{ele.title}</p>
                 <StarsR count={ele.rating} />
-                <Link to={'/Discription/${ele.id}'} className="link">Discription Link</Link>
-                <div className="Button-group mt-2">
-                  
+                <Link to={`/Discription/${ele.id}`} className="link">Discription Link</Link>
+                <div className="Button-group mt-2">  
                 <button onClick={this.setToggle} className={this.state.toggle ? "btn btn-light ml-2" : "btn btn-warning ml-2"} type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                   {this.state.toggle ? "Hid" : "Show"}
                  </button>                 
@@ -82,18 +75,19 @@ import {Link} from "react-router-dom"
                  <div className="card card-body mt-2" >{ele.discriptionM}</div>
                  :null}
                  </div>
-                
-                </div>
-               
+                 <Modals  movie={ele}/>
+      
+     
+      
+ 
+      </div>      
             
            
-            ))
-            
-      }
-      
-     </div>
-      <Modals movies={this.listsearch}/>
-     
+               ))
+               
+         }
+      <Modals classNmae ="add"/>
+      </div>
        </>      
         )
         

@@ -44,7 +44,9 @@ label{
   font-weight: 300;
   font-size: 14px;
 }
+
 .container{
+  position: relative;
   border:  #596164;
   margin: 15px;
   padding: 0;
@@ -142,12 +144,17 @@ box-shadow: 15px 10px 7px 1px rgba(0,0,0,0.54);
 /*Modal*/
 
 .Modal-cont{
-  margin-top: 2%;
-  margin-left: 3.8% ;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
   height: 325px;
   width: 250px;
-  margin-bottom: 2%;
+  opacity: 0.1;
 }
+
 .Modal-img{
 width:5vw ;
 }

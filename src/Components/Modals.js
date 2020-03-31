@@ -7,10 +7,15 @@ import {addmovie , edit} from "../Actions/actionFunc"
 class Modals extends Component {
     state={
     
-    title : this.props.movies,
-    img : this.props.movies,
-    rating : this.props.movies,
-    discriptionM:this.props.movies,
+    title : this.props.movie? this.props.movie.title : "",
+
+    img : this.props.movie? this.props.movie.img : "",
+
+    rating : this.props.movie? this.props.movie.rating : "",
+
+    
+
+    discriptionM:this.props.movie? this.props.movie.discriptionM : "",
 
       show:false
     }
@@ -44,19 +49,19 @@ moviRate=(e)=>{
   })
 }
 
-hundelInput=()=>{
-  this.props.movies?
+hundelInput=(e)=>{
+  this.props.movie?
   this.props.edit({img:this.state.img,
     title:this.state.title,
     rating:this.state.rating,
-    id:this.props.movies.id,
+    id:this.props.movie.id,
     discriptionM:this.state.discriptionM
     })
 
     &&
 
     this.setState({
-      toggle: false
+      show: false
     })
     :
     this.props.addmovie({title:this.state.title,
@@ -67,6 +72,18 @@ hundelInput=()=>{
   
       this.setState({
         show: false
+
+      })
+      this.setState({
+        title : "",
+
+    img :  "",
+
+    rating : "",
+
+    
+
+    discriptionM: "",
       })
 
 }
