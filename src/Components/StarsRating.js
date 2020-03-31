@@ -12,7 +12,7 @@ function StarsR({count , setRate = ()=>{} } ) {
     }
     return (
        
-        <div>
+        <div className="Stars">
         {stars}
         </div>
     )

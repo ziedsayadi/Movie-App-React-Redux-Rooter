@@ -16,4 +16,7 @@ export const addmovie=payload=>({
             id:Math.random()
         }
     })
+
+
+   
  
