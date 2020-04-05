@@ -143,17 +143,24 @@ box-shadow: 15px 10px 7px 1px rgba(0,0,0,0.54);
 }
 /*Modal*/
 
-.Modal-cont{
-  display: flex;
-  justify-content: space-evenly;
-  z-index: 1;
-  position: absolute;
-  right: 0;
-  top: 0;
+.Modal-add{
+ 
+  margin-left: 4%;
   height: 325px;
   width: 250px;
-  opacity: 0.1;
+  
 }
+.Modal-cont{
+   display: flex;
+   justify-content: space-evenly;
+   z-index: 1;
+   position: absolute;
+   right: 0;
+   top: 0;
+   height: 325px;
+   width: 250px;
+   opacity: 0.1;
+ }
 
 .Modal-img{
 width:5vw ;

@@ -3,7 +3,7 @@ import StarsR from './StarsRating'
 import Search from './Search'
 import Modals from "./Modals";
 import {connect} from "react-redux"
-import {delet , edit} from "../Actions/actionFunc"
+import {delet , edit , discriptionBtn} from "../Actions/actionFunc"
 import {Link} from "react-router-dom"
 
 
@@ -11,14 +11,14 @@ import {Link} from "react-router-dom"
     state={
     search:'',
     index: 0 ,  
-    toggle:false
+    // toggle:false
   }
 
-  setToggle=()=>{
-    this.setState(
-      {toggle:! this.state.toggle}
-      )
-  }
+  // setToggle=()=>{
+  //   this.setState(
+  //     {toggle:! this.state.toggle}
+  //     )
+  // }
 
  setRate = (ratestar)=>this.setState({index : ratestar })
 
@@ -67,11 +67,11 @@ import {Link} from "react-router-dom"
                 <StarsR count={ele.rating} />
                 <Link to={`/Discription/${ele.id}`} className="link">Discription Link</Link>
                 <div className="Button-group mt-2">  
-                <button onClick={this.setToggle} className={this.state.toggle ? "btn btn-light ml-2" : "btn btn-warning ml-2"} type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                  {this.state.toggle ? "Hid" : "Show"}
+                <button onClick={()=>this.props.discriptionBtn(ele.id)} className={ele.toggle ? "btn btn-light ml-2" : "btn btn-warning ml-2"} type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  {ele.toggle ? "Hid" : "Show"}
                  </button>                 
                  <button onClick={()=>{this.props.delet(ele.id)}} className="btn btn-warning ml-5">Delet</button>              
-                { this.state.toggle ? 
+                { ele.toggle ? 
                  <div className="card card-body mt-2" >{ele.discriptionM}</div>
                  :null}
                  </div>
@@ -86,7 +86,7 @@ import {Link} from "react-router-dom"
                ))
                
          }
-      <Modals classNmae ="add"/>
+      
       </div>
        </>      
         )
@@ -99,4 +99,5 @@ const mapReducerProps=state=>{
 
 
 
-export default connect(mapReducerProps,{delet , edit})(MovieList)
+
+export default connect(mapReducerProps,{delet , edit , discriptionBtn})(MovieList)

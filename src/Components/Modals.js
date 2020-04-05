@@ -49,7 +49,7 @@ moviRate=(e)=>{
   })
 }
 
-hundelInput=(e)=>{
+hundelInput=()=>{
   this.props.movie?
   this.props.edit({img:this.state.img,
     title:this.state.title,
@@ -97,7 +97,7 @@ hundelInput=(e)=>{
   render() {
     return (
       <>
-    <Button variant="secondary" className="Modal-cont" onClick={this.handleShow}>
+    <Button variant="secondary" className={this.props.movie ?  "Modal-cont" : "Modal-add"} onClick={this.handleShow}>
     <img className="Modal-img" src="https://cdn3.iconfinder.com/data/icons/glyph/227/Button-Add-1-512.png"/>
      
     </Button>

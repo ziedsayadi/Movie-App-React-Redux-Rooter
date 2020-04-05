@@ -1,4 +1,4 @@
-import {EDIT_MOVIE , DELET_MOVIE , ADD_MOVIE} from "./actionConst"
+import {EDIT_MOVIE , DELET_MOVIE , ADD_MOVIE, DESCRIPTION_BTN} from "./actionConst"
 
 export function edit (payload){
 return {type:EDIT_MOVIE , payload
@@ -16,7 +16,11 @@ export const addmovie=payload=>({
             id:Math.random()
         }
     })
-
+export const discriptionBtn=(id)=>({
+    type:DESCRIPTION_BTN,
+    payload:id,
+    
+})
 
    
  
